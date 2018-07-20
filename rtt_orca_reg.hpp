@@ -29,7 +29,7 @@ public:
    {
       	ndof_ = robot()->getNrOfDegreesOfFreedom();
         Gravity_torque_ =robot()->getJointGravityTorques();
-	(euclidianNorm().b()).segment(6,ndof_) = -0.5*Gravity_torque_ ;
+	(euclidianNorm().b()).segment(6,ndof_) = -Gravity_torque_ ;
      }
       
 protected:
